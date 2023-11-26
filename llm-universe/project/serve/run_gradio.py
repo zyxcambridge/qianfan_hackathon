@@ -14,6 +14,7 @@ from database.create_db import create_db_info
 from qa_chain.Chat_QA_chain_self import Chat_QA_chain_self
 from qa_chain.QA_chain_self import QA_chain_self
 
+
 # 导入 dotenv 库的函数
 # dotenv 允许您从 .env 文件中读取环境变量
 # 这在开发时特别有用，可以避免将敏感信息（如API密钥）硬编码到代码中
@@ -30,15 +31,15 @@ LLM_MODEL_DICT = {
 
 
 LLM_MODEL_LIST = sum(list(LLM_MODEL_DICT.values()),[])
-INIT_LLM = "chatglm_std"
-EMBEDDING_MODEL_LIST = ['zhipuai', 'openai', 'm3e']
+INIT_LLM = "ERNIE-Bot"
+EMBEDDING_MODEL_LIST = [ 'openai', 'm3e']
 INIT_EMBEDDING_MODEL = "openai"
 DEFAULT_DB_PATH = "../../data_base/knowledge_db"
 DEFAULT_PERSIST_PATH = "../../data_base/vector_db/chroma"
 AIGC_AVATAR_PATH = "aigc_avatar.png"
-DATAWHALE_AVATAR_PATH = "datawhale_avatar.png"
-AIGC_LOGO_PATH = "../../figures/aigc_logo.png"
-DATAWHALE_LOGO_PATH = "../../figures/datawhale_logo.png"
+DATAWHALE_AVATAR_PATH = "yuanhuan.png"
+AIGC_LOGO_PATH = "agent.webp"
+DATAWHALE_LOGO_PATH = "agent.webp"
 
 
 def get_model_by_platform(platform):
